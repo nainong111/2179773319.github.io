@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Mirrored from 奶龙.cc/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2026 07:40:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <html lang="zh-cn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>奶龙家族</title>
+    <link rel="icon" href="upload/image/website_icon.jpg" type="image/svg+xml" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="奶龙家族" />
+    <link rel="apple-touch-icon" href="upload/image/website_icon.jpg" />
+    <link rel="shortcut icon" href="upload/image/website_icon.jpg" type="image/x-icon" />
+        
+    <meta name="description" content="奶龙家族" />
+    <link href="view/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="view/js/3.4.17.js"></script>
+    <link rel="stylesheet" href="view/css/style.css" />
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#121212',secondary:'#2A2A2A',accent:'#6C5CE7',neutral:'#F5F5F5','text-dark':'#121212','text-light':'#6B7280',},fontFamily:{inter:['Inter','sans-serif'],},}}}</script>
+    <script src="view/js/jquery-3.1.0.js"></script>
+    <script>var public_icon = 'upload/image/website_icon.jpg';</script>
+    <script src="view/js/oddfox0690.js?t=1780903953"></script>
+ <style>
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+    
+    /* 极致压缩卡片高度 - 适当增加高度以容纳更大图片 */
+    .category-card {
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        border-radius: 14px;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.08),
+            -4px -4px 8px rgba(255, 255, 255, 0.7),
+            inset 1px 1px 0 rgba(255, 255, 255, 0.8),
+            inset -1px -1px 0 rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 12px; /* 稍微增加内边距 */
+        border: none;
+        margin-bottom: 8px; /* 适当增加间距 */
+        min-height: 90px; /* 增加高度以容纳更大图片 */
+        height: 90px; /* 固定高度 */
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    
+    .category-card:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 
+            8px 8px 16px rgba(0, 0, 0, 0.12),
+            -8px -8px 16px rgba(255, 255, 255, 0.8),
+            inset 2px 2px 0 rgba(255, 255, 255, 0.9),
+            inset -2px -2px 0 rgba(0, 0, 0, 0.07);
+    }
+    
+    .category-card:active {
+        transform: translateY(-1px) scale(1.01);
+        box-shadow: 
+            3px 3px 6px rgba(0, 0, 0, 0.08),
+            -3px -3px 6px rgba(255, 255, 255, 0.6),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* 卡片发光边框效果 */
+    .category-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 14px;
+        padding: 1px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(0,0,0,0.05));
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    
+    /* 卡片左上角高光 */
+    .category-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background: radial-gradient(circle at 0 0, rgba(255,255,255,0.3) 0%, transparent 70%);
+        border-radius: 14px 0 0 0;
+        pointer-events: none;
+    }
+    
+    /* logo样式 - 统一对齐，放大图片 */
+    .category-card-img {
+        width: 65px; /* 增加宽度以放大图片 */
+        height: 65px; /* 增加高度以放大图片 */
+        border-radius: 12px; /* 稍微增加圆角 */
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-right: 12px; /* 增加间距 */
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        background: linear-gradient(135deg, #ffffff, #f0f0f0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 
+            3px 3px 6px rgba(0, 0, 0, 0.08),
+            -3px -3px 6px rgba(255, 255, 255, 0.8);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .category-card-img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+        z-index: 1;
+    }
+    
+    /* 确保图片完全填充容器并居中 */
+    .category-card-img img {
+        width: 100%; /* 图片占满容器 */
+        height: 100%; /* 图片占满容器 */
+        object-fit: contain; /* 保持图片比例，完全显示 */
+        border-radius: 8px; /* 稍微增加圆角 */
+        position: relative;
+        z-index: 2;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    /* 卡片内容区域 - 调整对齐 */
+    .category-card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 65px; /* 匹配图片高度 */
+        gap: 4px; /* 适当增加间隙 */
+        padding-top: 0;
+        overflow: hidden;
+    }
+    
+    .category-card-title {
+        font-size: 15px; /* 增加字体大小 */
+        font-weight: 700;
+        margin-bottom: 3px;
+        color: #121212;
+        line-height: 1.2; /* 增加行高 */
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .category-card-desc {
+        font-size: 12px; /* 增加字体大小 */
+        color: #666;
+        line-height: 1.3; /* 增加行高 */
+        margin-bottom: 4px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* 只显示一行 */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex-grow: 1;
+    }
+    
+    /* 卡片底部按钮区域 */
+    .category-card-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 3px;
+        padding-top: 4px;
+    }
+    
+    /* 立即打开按钮 */
+    .download-btn {
+        background: linear-gradient(145deg, #333333, #121212);
+        color: white;
+        border: none;
+        border-radius: 8px; /* 稍微增加圆角 */
+        padding: 6px 12px; /* 增加内边距 */
+        font-size: 11px; /* 增加字体大小 */
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        box-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.2),
+            -1px -1px 3px rgba(255, 255, 255, 0.1),
+            inset 1px 1px 0 rgba(255, 255, 255, 0.15);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        height: 26px; /* 增加按钮高度 */
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        min-width: 70px; /* 增加最小宽度 */
+        animation: bounce 1s infinite;
+    }
+    
+    .download-btn:hover {
+        background: linear-gradient(145deg, #121212, #333333);
+        transform: translateY(-2px);
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.25),
+            -2px -2px 4px rgba(255, 255, 255, 0.15),
+            inset 2px 2px 0 rgba(255, 255, 255, 0.2);
+    }
+    
+    .download-btn:active {
+        transform: translateY(0);
+        box-shadow: 
+            1px 1px 2px rgba(0, 0, 0, 0.15),
+            -1px -1px 2px rgba(255, 255, 255, 0.05),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .download-btn i {
+        font-size: 10px; /* 增加图标大小 */
+    }
+    
+    /* 两列网格布局 */
+    .tab-content-container .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px; /* 增加网格间隙 */
+    }
+    
+    .tab-content-container {
+        margin-bottom: 10px;
+    }
+    
+    .mx-3.mb-4 {
+        margin-bottom: 8px;
+    }
+    
+    /* 标签按钮：保持原有样式 */
+    .tab-button {
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        color: #666;
+        border: none;
+        border-radius: 12px;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        flex: 1;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.08),
+            -4px -4px 8px rgba(255, 255, 255, 0.8);
+    }
+    
+    .tab-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.1),
+            -6px -6px 12px rgba(255, 255, 255, 0.9);
+    }
+    
+    .tab-button.active {
+        background: linear-gradient(145deg, #121212, #333333);
+        color: white;
+        font-weight: 600;
+        box-shadow: 
+            6px 6px 12px rgba(18, 18, 18, 0.15),
+            -2px -2px 6px rgba(255, 255, 255, 0.1),
+            inset 2px 2px 0 rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+    
+    .tab-button.active:hover {
+        background: linear-gradient(145deg, #333333, #121212);
+        transform: translateY(-3px);
+        box-shadow: 
+            8px 8px 16px rgba(18, 18, 18, 0.2),
+            -3px -3px 8px rgba(255, 255, 255, 0.15),
+            inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+    }
+    
+    /* 标签容器优化 */
+    .tab-buttons-container {
+        display: flex;
+        gap: 8px;
+        padding: 12px;
+        background: linear-gradient(145deg, #f8f9fa, #ffffff);
+        border-radius: 14px;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.05),
+            -4px -4px 8px rgba(255, 255, 255, 0.8);
+        margin: 0 12px 8px;
+    }
+    
+    /* 分享按钮和弹窗：黑色 */
+    .nav-action-button {
+        background: linear-gradient(145deg, #121212, #333333);
+        color: white;
+        border-radius: 10px;
+        padding: 8px 16px;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: 
+            3px 3px 6px rgba(0, 0, 0, 0.2),
+            -2px -2px 4px rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-action-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            5px 5px 10px rgba(0, 0, 0, 0.25),
+            -3px -3px 6px rgba(255, 255, 255, 0.15);
+    }
+    
+    /* 分享图标颜色 */
+    .share-platform[data-platform="qq"] .fa-qq {
+        color: #121212 !important;
+    }
+    
+    .share-platform[data-platform="weixin"] .fa-weixin {
+        color: #121212 !important;
+    }
+    
+    .share-platform[data-platform="telegram"] .fa-paper-plane {
+        color: #121212 !important;
+    }
+    
+    .btn-copy {
+        background: linear-gradient(145deg, #121212, #333333) !important;
+    }
+    
+    /* 新的公告栏样式 - 黑色，速度增加一倍 */
+    .announcement-bar {
+        background: linear-gradient(145deg, #121212, #333333);
+        border-radius: 12px;
+        margin: 8px 12px;
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.2),
+            -2px -2px 6px rgba(255, 255, 255, 0.05);
+    }
+    
+    .announcement-icon {
+        color: white;
+        font-size: 18px;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    .announcement-container {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        height: 24px;
+    }
+    
+    .announcement-scroll {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        line-height: 24px;
+        /* 速度增加一倍：从30s改为15s */
+        animation: scroll-text 15s linear infinite;
+        padding-left: 100%;
+    }
+    
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+    /* 公告弹窗按钮：黑色 */
+    #announcementPopup button {
+        background: linear-gradient(145deg, #121212, #333333) !important;
+    }
+    
+    /* 客服页面全面优化 - 黑色立体感设计 */
+    .contact-card {
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        border-radius: 18px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 
+            8px 8px 16px rgba(0, 0, 0, 0.1),
+            -8px -8px 16px rgba(255, 255, 255, 0.7);
+        border: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 
+            12px 12px 24px rgba(0, 0, 0, 0.15),
+            -12px -12px 24px rgba(255, 255, 255, 0.8);
+    }
+    
+    .contact-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #121212, #333333);
+        border-radius: 18px 18px 0 0;
+    }
+    
+    .contact-header {
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #ffffff, #f0f0f0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.1),
+            -4px -4px 8px rgba(255, 255, 255, 0.8);
+    }
+    
+    .contact-icon img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* 客服复制区域 */
+    .contact-copy-area {
+        background: linear-gradient(145deg, #fafafa, #f0f0f0);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 
+            inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+            inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+    }
+    
+    .contact-copy-text {
+        font-size: 14px;
+        color: #121212;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: 4px 0;
+    }
+    
+    /* 客服按钮优化 */
+    .contact-copy-btn {
+        background: linear-gradient(145deg, #333333, #121212);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.15),
+            -2px -2px 6px rgba(255, 255, 255, 0.1),
+            inset 1px 1px 0 rgba(255, 255, 255, 0.15);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .contact-copy-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.2),
+            -3px -3px 8px rgba(255, 255, 255, 0.15),
+            inset 2px 2px 0 rgba(255, 255, 255, 0.2);
+    }
+    
+    .contact-copy-btn:active {
+        transform: translateY(0);
+        box-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.1),
+            -1px -1px 3px rgba(255, 255, 255, 0.05),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 客服操作按钮 */
+    .contact-action-btn {
+        border-radius: 10px;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 
+            4px 4px 8px rgba(0, 0, 0, 0.08),
+            -4px -4px 8px rgba(255, 255, 255, 0.8);
+    }
+    
+    .contact-action-btn.bg-primary {
+        background: linear-gradient(145deg, #333333, #121212);
+        color: white;
+        border: none;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .contact-action-btn.bg-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.15),
+            -6px -6px 12px rgba(255, 255, 255, 0.9);
+    }
+    
+    .contact-action-btn.border-primary {
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        color: #121212;
+        border: 1px solid rgba(18, 18, 18, 0.2);
+    }
+    
+    .contact-action-btn.border-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.1),
+            -6px -6px 12px rgba(255, 255, 255, 0.9);
+    }
+    
+    /* 所有 .text-primary 类的文字：黑色 */
+    .text-primary {
+        color: #121212 !important;
+    }
+    
+    /* 优化顶部导航 - 减少高度 */
+    .top-nav {
+        background: white;
+        box-shadow: 
+            0 2px 10px rgba(0, 0, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        padding: 8px 0;
+    }
+    
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    
+    .nav-logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        background: white;
+        box-shadow: 
+            3px 3px 6px rgba(0, 0, 0, 0.1),
+            -3px -3px 6px rgba(255, 255, 255, 0.8);
+    }
+    
+    .nav-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .nav-title {
+        color: #121212;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    
+    .nav-subtitle {
+        color: #121212 !important;
+        opacity: 0.8;
+        font-size: 12px;
+        line-height: 1.2;
+        margin-top: 2px;
+    }
+    
+    /* 优化底部导航 - 进一步减少高度 */
+    .bottom-nav {
+        background: white;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 4px 0;
+        box-shadow: 
+            0 -2px 10px rgba(0, 0, 0, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        height: 52px;
+    }
+    
+    .bottom-nav-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 12px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        color: #666;
+        cursor: pointer;
+        position: relative;
+        min-width: 60px;
+        background: transparent;
+    }
+    
+    .nav-item:hover {
+        transform: translateY(-2px);
+    }
+    
+    .nav-item.active {
+        background: linear-gradient(145deg, #121212, #333333);
+        color: white;
+        box-shadow: 
+            6px 6px 12px rgba(18, 18, 18, 0.15),
+            -2px -2px 6px rgba(255, 255, 255, 0.1),
+            inset 2px 2px 0 rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+    
+    .nav-item.active:hover {
+        transform: translateY(-3px);
+        box-shadow: 
+            8px 8px 16px rgba(18, 18, 18, 0.2),
+            -3px -3px 8px rgba(255, 255, 255, 0.15),
+            inset 3px 3px 0 rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-icon {
+        font-size: 16px;
+        margin-bottom: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-label {
+        font-size: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-item.active .nav-icon,
+    .nav-item.active .nav-label {
+        color: white;
+    }
+    
+    /* 页面顶部标题：黑色 */
+    .page-header-title {
+        color: #121212 !important;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    /* VPN弹窗主要按钮：黑色 */
+    #vpnPopup button.bg-primary {
+        background: linear-gradient(145deg, #121212, #333333) !important;
+    }
+    
+    /* VPN弹窗已连接按钮：改为黑色 */
+    #vpnPopup button.bg-green-500 {
+        background: linear-gradient(145deg, #121212, #333333) !important;
+    }
+    
+    /* 弹窗关闭按钮悬停色：黑色 */
+    .share-popup .btn-active:hover {
+        color: #121212 !important;
+    }
+    
+    /* 横幅边框（若有）：黑色 */
+    .banner-image {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.1),
+            -6px -6px 12px rgba(255, 255, 255, 0.7);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    /* 客服页面标题优化 */
+    .contact-card h3 {
+        color: #121212 !important;
+    }
+    
+    .contact-card .text-primary {
+        color: #121212 !important;
+        opacity: 0.8;
+    }
+    
+    /* 横幅区域调整 */
+    .mx-3.my-4.rounded-xl.shadow-xl.overflow-hidden {
+        margin: 10px 12px;
+    }
+    
+    /* 标签容器调整 */
+    .mx-3.mb-4 {
+        margin: 0 12px 8px;
+    }
+    
+    /* 内容容器调整 */
+    .tab-content-container.mx-3.mb-6 {
+        margin: 0 12px 10px;
+    }
+    
+    /* 卡片内部布局调整 - 确保垂直居中 */
+    .category-card .flex {
+        display: flex;
+        align-items: center; /* 垂直居中 */
+        height: 100%; /* 填充整个卡片高度 */
+    }
+    
+    @media (max-width: 380px) {
+        /* 移动端卡片布局 - 适当调整 */
+        .category-card {
+            padding: 8px 10px;
+            min-height: 80px; /* 移动端调整高度 */
+            height: 80px;
+            border-radius: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .category-card-img {
+            width: 55px; /* 移动端调整logo大小 */
+            height: 55px;
+            margin-right: 8px;
+            border-radius: 10px;
+        }
+        
+        .category-card-img img {
+            width: 100%; /* 图片占满容器 */
+            height: 100%;
+        }
+        
+        .category-card-title {
+            font-size: 13px;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+        
+        .category-card-desc {
+            font-size: 11px;
+            line-height: 1.2;
+            -webkit-line-clamp: 1;
+            margin-bottom: 3px;
+        }
+        
+        .download-btn {
+            padding: 5px 8px;
+            font-size: 10px;
+            height: 24px;
+            min-width: 65px;
+        }
+        
+        /* 移动端网格间距调整 */
+        .tab-content-container .grid {
+            gap: 6px;
+        }
+        
+        /* 移动端底部导航优化 */
+        .bottom-nav {
+            padding: 3px 0;
+            height: 50px;
+        }
+        
+        .nav-item {
+            padding: 3px 10px;
+            min-width: 55px;
+            border-radius: 10px;
+        }
+        
+        .nav-icon {
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+        
+        .nav-label {
+            font-size: 9px;
+        }
+        
+        /* 移动端标签按钮优化 */
+        .tab-button {
+            padding: 8px 12px;
+            font-size: 13px;
+            border-radius: 10px;
+        }
+        
+        .tab-buttons-container {
+            padding: 10px;
+            border-radius: 12px;
+            gap: 6px;
+            margin: 0 10px 8px;
+        }
+        
+        /* 移动端公告栏调整 */
+        .announcement-bar {
+            margin: 8px 10px;
+            padding: 10px 12px;
+            border-radius: 10px;
+        }
+        
+        .announcement-icon {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        .announcement-scroll {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        
+        .announcement-container {
+            height: 20px;
+        }
+        
+        /* 移动端顶部导航优化 */
+        .top-nav {
+            padding: 6px 0;
+        }
+        
+        .nav-container {
+            padding: 0 10px;
+        }
+        
+        .nav-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+        }
+        
+        .nav-title {
+            font-size: 16px;
+        }
+        
+        .nav-subtitle {
+            font-size: 11px;
+        }
+        
+        .nav-action-button {
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 8px;
+        }
+        
+        /* 移动端客服页面调整 */
+        .contact-card {
+            padding: 15px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+        }
+        
+        .contact-icon img {
+            width: 26px;
+            height: 26px;
+        }
+        
+        .contact-copy-area {
+            padding: 12px;
+            border-radius: 10px;
+        }
+        
+        .contact-copy-text {
+            font-size: 13px;
+        }
+        
+        .contact-copy-btn {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+        
+        .contact-action-btn {
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+        
+        /* 横幅区域移动端调整 */
+        .mx-3.my-4.rounded-xl.shadow-xl.overflow-hidden {
+            margin: 8px 10px;
+        }
+        
+        /* 内容容器移动端调整 */
+        .tab-content-container.mx-3.mb-6 {
+            margin: 0 10px 8px;
+        }
+    }
+    
+    /* 超小屏幕适配 - 两列布局保持，调整尺寸 */
+    @media (max-width: 320px) {
+        .category-card {
+            padding: 6px 8px;
+            min-height: 75px;
+            height: 75px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .category-card-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 6px;
+            border-radius: 8px;
+        }
+        
+        .category-card-img img {
+            width: 100%; /* 图片占满容器 */
+            height: 100%;
+        }
+        
+        .category-card-title {
+            font-size: 12px;
+        }
+        
+        .category-card-desc {
+            font-size: 10px;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+        
+        .download-btn {
+            min-width: 60px;
+            font-size: 9px;
+            padding: 4px 6px;
+            height: 22px;
+        }
+        
+        /* 超小屏幕网格间距调整 */
+        .tab-content-container .grid {
+            gap: 5px;
+        }
+        
+        .nav-title {
+            font-size: 15px;
+        }
+        
+        .nav-subtitle {
+            font-size: 10px;
+        }
+        
+        .nav-action-button {
+            font-size: 11px;
+            padding: 5px 10px;
+        }
+    }
+</style>
+</head>
+<body id="body-root">
+    <div id="root">
+        <div id="app">
+            <div id="sharePopup" class="share-popup">
+                <div class="share-container">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-primary">
+                                分享奶龙家族                            </h3>
+                            <button class="text-text-light hover:text-primary transition-colors btn-active"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="mb-5">
+                            <p class="text-sm text-text-light mb-2">复制链接</p>
+                            <div class="flex">
+                                <input type="text" class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary text-primary domain-text" readonly value="https://奶龙.cc/">
+                                <button class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-primary/90 transition-colors flex items-center justify-content btn-active btn-copy"><i class="fa fa-copy mr-1"></i>复制</button>
+                            </div>
+                        </div>
+                        <p class="text-sm text-text-light mb-3">分享到</p>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button class="share-platform btn-active" data-platform="qq">
+                                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-1"><i class="fa fa-qq text-[#121212] text-xl"></i></div><span class="text-xs">QQ</span>
+                            </button>
+                            <button class="share-platform btn-active" data-platform="weixin">
+                                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-1"><i class="fa fa-weixin text-[#121212] text-xl"></i></div><span class="text-xs">微信</span></button>
+                            <button class="share-platform btn-active" data-platform="telegram">
+                                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-1"><i class="fa fa-paper-plane text-[#121212] text-xl"></i></div><span class="text-xs">Telegram</span>
+                            </button>
+                            <button class="share-platform btn-active" data-platform="more">
+                                <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-1"><i class="fa fa-ellipsis-h text-gray-500 text-xl"></i></div><span class="text-xs">更多</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+            <div id="vpnPopup" class="share-popup hidden" style="display:none!important;">
+                <div class="share-container">
+                    <div class="p-5 border-b border-gray-100">
+                        <div class="flex justify-center items-center">
+                            <h3 class="text-lg font-semibold text-primary">使用提示</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="text-sm text-text-dark font-weight-medium leading-relaxed mb-4 text-center">
+                            <p>PG试玩需要翻墙才能正常使用</p>
+                            <p>请您打开VPN代理后再进行访问</p>
+                            <p>如您已开启VPN请关闭该提示</p>
+                        </div>
+                        <button class="w-full py-3 rounded-lg bg-primary text-white font-weight-bold hover:bg-primary/90 transition-colors mb-4 btn-active">点击下载VPN</button>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <button class="flex-1 mr-2 py-3 rounded-lg bg-primary text-white font-weight-bold hover:bg-primary/90 transition-colors text-xs whitespace-nowrap btn-active">已连接VPN继续访问</button>
+                            <button class="flex-1 ml-2 py-3 rounded-lg bg-gray-200 text-gray-700 font-weight-bold hover:bg-gray-300 transition-colors text-xs whitespace-nowrap btn-active">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="announcementPopup" class="announcement-popup ">
+                <div class="announcement-container-new">
+                    <button class="announcement-close-btn btn-active">
+                        <i class="fa fa-times">
+                        </i>
+                    </button>
+                    <div class="noticeNew mb-4">
+                        <div class="topline"></div>
+                        <img src="upload/image/website_icon.jpg" class="logoimg no-image-save" alt="奶龙家族logo">
+                        <div class="dear">
+                            尊敬的用户：
+                        </div>
+                        <div class="maincontents">
+                            所有平台第一次注册的新用户 周期内充值满788电子流水达到3000联系旺旺客服返288红包                        </div>
+                        <div class="info-group">
+                            <div class="foot">
+                                奶龙家族                            </div>
+                            <div class="date">
+                                2026-5-20 00:00:00                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto px-4">
+                        <button class="w-full py-3 text-center bg-primary text-white rounded cursor-pointer text-base font-weight-bold border-none transition-colors hover:bg-primary/90 btn-active">我知道了</button>
+                        <div class="mt-3 mb-4 text-xs text-gray-500 text-center">
+                            奶龙.cc                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-container">
+                <div class="page">
+                    <header class="page-header">
+                        <div class="page-header-container">
+                            <h2 class="page-header-title">
+                                奶龙家族客服
+                            </h2>
+                        </div>
+                    </header>
+                    <div class="mx-4 my-4">
+                                                                                    <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="flex items-center">
+                                    <div class="contact-icon">
+                                        <img src="view/img/wangshangliao_logo.svg" alt="旺旺 Logo" class="w-8 h-8 no-image-save">
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="font-weight-bold text-xl" style="color: #121212; margin-bottom: 4px;">旺商聊客服</h3>
+                                        <p class="text-primary text-sm font-medium">24小时在线支持</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="contact-copy-area flex items-center justify-between">
+                                    <div>
+                                        <p class="contact-copy-text">客服账号</p>
+                                        <p class="text-text-dark font-weight-medium" style="font-size: 15px;">1086861</p>
+                                    </div>
+                                    <button class="contact-copy-btn bg-primary btn-active"><i class="fa fa-copy mr-1"></i>复制</button>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 mt-4">
+                                    <button class="contact-action-btn bg-primary text-white btn-active" onClick="window.location.href='https://t.me/yehui0'"><i class="fa fa-comments mr-2"></i>打开旺旺</button>
+                                    <button class="contact-action-btn border border-primary text-primary btn-active" onClick="window.location.href='https://t.me/yehui0'"><i class="fa fa-download mr-2"></i>下载应用</button>
+                                </div>
+                            </div>
+                        </div>
+                                                                                    <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="flex items-center">
+                                    <div class="contact-icon">
+                                        <img src="view/img/wangshangliao_logo.svg" alt="旺旺 Logo" class="w-8 h-8 no-image-save">
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="font-weight-bold text-xl" style="color: #121212; margin-bottom: 4px;">旺商聊客服</h3>
+                                        <p class="text-primary text-sm font-medium">24小时在线支持</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="contact-copy-area flex items-center justify-between">
+                                    <div>
+                                        <p class="contact-copy-text">客服账号</p>
+                                        <p class="text-text-dark font-weight-medium" style="font-size: 15px;">1086861</p>
+                                    </div>
+                                    <button class="contact-copy-btn bg-primary btn-active"><i class="fa fa-copy mr-1"></i>复制</button>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3 mt-4">
+                                    <button class="contact-action-btn bg-primary text-white btn-active" onClick="window.location.href='https://www.google.com/'"><i class="fa fa-comments mr-2"></i>打开旺旺</button>
+                                    <button class="contact-action-btn border border-primary text-primary btn-active" onClick="window.location.href='https://www.google.com/'"><i class="fa fa-download mr-2"></i>下载应用</button>
+                                </div>
+                            </div>
+                        </div>
+                                                                                </div>
+                </div>
+                <div class="page active">
+                    <header class="top-nav">
+                        <div class="nav-container">
+                            <div class="nav-logo-container">
+                                <div class="nav-logo">
+                                    <img src="upload/image/website_icon.jpg" alt="奶龙导航网Logo" class="w-full h-full object-cover no-image-save">
+                                </div>
+                                <div>
+                                    <h2 class="nav-title" style="line-height: 1.1; margin-bottom: 2px;">奶龙导航网</h2>
+                                    <p class="nav-subtitle" style="line-height: 1.1; margin-top: 0;">奶龙.cc</p>
+                                </div>
+                            </div>
+                            <button class="nav-action-button btn-active"><i class="fa fa-share-alt mr-1"></i>分享</button>
+                        </div>
+                    </header>
+                    <section class="mx-3 my-4 rounded-xl shadow-xl overflow-hidden">
+                        <img src="upload/image/website_banner.jpg" alt="奶龙导航网横幅" class="banner-image no-image-save" loading="lazy">
+                    </section>
+                    <!-- 新的滚动公告栏 - 黑色主题，速度增加一倍 -->
+                    <section class="announcement-bar">
+                        <div class="announcement-icon">
+                            <i class="fa fa-bullhorn"></i>
+                        </div>
+                        <div class="announcement-container">
+                            <div class="announcement-scroll">
+                            奶龙家族旗下所有平台一个周期内充700反288 祝各位旗开得胜。                            </div>
+                        </div>
+                    </section>
+                    <!-- 优化后的标签栏 -->
+                    <section class="mx-3 mb-4">
+                        <div class="tab-buttons-container">
+                            <button class="tab-button btn-active active">稳台推荐</button>
+                            <button class="tab-button btn-active">模拟器</button>
+                            <button class="tab-button btn-active">深夜视频</button>
+                        </div>
+                    </section>
+                    <!-- 双列卡片布局 - 极致压缩高度 -->
+                    <div class="tab-content-container mx-3 mb-6 relative overflow-hidden">
+                        <div class="tab-content active">
+                            <div class="grid">
+                                                                                                                    <div class="category-card btn-active" data-url="https://psktkx.tckqxx.com/app/register.php?site_id=1065&topId=39815&selfPlanId=23117" data-name="龙腾国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_12.jpg" alt="龙腾国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                龙腾国际                                            </div>
+                                            <div class="category-card-desc">
+                                                龙腾国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://psktkx.tckqxx.com/app/register.php?site_id=1065&topId=39815&selfPlanId=23117', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                         <div class="category-card btn-active" data-url="https://ybkvbz.tckqxx.com/app/register.php?site_id=1066&topId=1077254&aPlanId=0&isAllProxy=1" data-name="聚鑫汇">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_11.jpg" alt="聚鑫汇" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                聚鑫汇                                            </div>
+                                            <div class="category-card-desc">
+                                                聚鑫汇                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://ybkvbz.tckqxx.com/app/register.php?site_id=1066&topId=1077254&aPlanId=0&isAllProxy=1', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        <div class="category-card btn-active" data-url="https://pkajim.hfjcl.com/app/register.php?site_id=1032&amp;pt=54396993-CC3C-DA8C-026D-7965277AE688" data-name="超凡国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_10.jpg" alt="超凡国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                超凡国际                                            </div>
+                                            <div class="category-card-desc">
+                                                超凡国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://pkajim.hfjcl.com/app/register.php?site_id=1032&amp;pt=54396993-CC3C-DA8C-026D-7965277AE688', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://rsesra.hfjcl.com/app/register.php?site_id=1064&amp;pt=7FC099D2-80F8-F28B-DFAF-889C03B77BDA" data-name="领航国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_9.jpg" alt="领航国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                领航国际                                            </div>
+                                            <div class="category-card-desc">
+                                                领航国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://rsesra.hfjcl.com/app/register.php?site_id=1064&amp;pt=7FC099D2-80F8-F28B-DFAF-889C03B77BDA', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://ncgca.tprsmi.com/app/register.php?site_id=1062&amp;topId=40156&amp;selfPlanId=63073" data-name="汇赢国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_6.jpg" alt="汇赢国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                汇赢国际                                            </div>
+                                            <div class="category-card-desc">
+                                                汇赢国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://ncgca.tprsmi.com/app/register.php?site_id=1062&amp;topId=40156&amp;selfPlanId=63073', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://tfajn.hcjwj.com/app/register.php?site_id=2081&amp;topId=418517&amp;selfPlanId=431166" data-name="君临国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_5.jpg" alt="君临国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                君临国际                                            </div>
+                                            <div class="category-card-desc">
+                                                君临国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://tfajn.hcjwj.com/app/register.php?site_id=2081&amp;topId=418517&amp;selfPlanId=431166', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://lejva.tprsmi.com/app/register.php?site_id=1058&amp;topId=75986&amp;selfPlanId=64214" data-name="胜天国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_4.jpg" alt="胜天国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                胜天国际                                            </div>
+                                            <div class="category-card-desc">
+                                                胜天国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://lejva.tprsmi.com/app/register.php?site_id=1058&amp;topId=75986&amp;selfPlanId=64214', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://pkajim.hfjcl.com/app/register.php?site_id=1031&amp;pt=95D5CB21-CD42-CF10-317A-23B6C0D40400" data-name="征途国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_3.jpg" alt="征途国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                征途国际                                            </div>
+                                            <div class="category-card-desc">
+                                                征途国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://pkajim.hfjcl.com/app/register.php?site_id=1031&amp;pt=95D5CB21-CD42-CF10-317A-23B6C0D40400', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://gfvgx.jgqvji.com/app/register.php?site_id=1030&amp;topId=27820" data-name="巅峰国际">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_1.jpg" alt="巅峰国际" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                巅峰国际                                            </div>
+                                            <div class="category-card-desc">
+                                                巅峰国际                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://gfvgx.jgqvji.com/app/register.php?site_id=1030&amp;topId=27820', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://149.30.163.235:32011/#/link?allwin=9MU1F%2Fa2MCqj%2FiLrMaO%2Beg%3D%3D" data-name="南宫">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_8.jpg" alt="南宫" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                南宫                                            </div>
+                                            <div class="category-card-desc">
+                                                南宫                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://149.30.163.235:32011/#/link?allwin=9MU1F%2Fa2MCqj%2FiLrMaO%2Beg%3D%3D', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                     <div class="category-card btn-active" data-url="https://krlutn.tckqxx.com/app/register.php?site_id=1020&topId=2224201" data-name="问鼎">
+                                    <div class="flex">
+                                        <div class="category-card-img">
+                                            <img src="upload/image/website_7.jpg" alt="问鼎" class="logo-image no-image-save" loading="lazy">
+                                        </div>
+                                        <div class="category-card-content">
+                                            <div class="category-card-title">
+                                                问鼎                                            </div>
+                                            <div class="category-card-desc">
+                                                问鼎                                            </div>
+                                            <div class="category-card-footer">
+                                                <button class="download-btn btn-active" onclick="event.stopPropagation(); window.open('https://krlutn.tckqxx.com/app/register.php?site_id=1020&topId=2224201', '_blank');">
+                                                    <i class="fa fa-external-link"></i>立即打开
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                 </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="grid">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="grid">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                        </div>
+                    </div>
+                </div>                    
+                <div class="page">
+                    <header class="page-header">
+                        <div class="page-header-container">
+                            <h2 class="page-header-title">
+                                奶龙导航网加拿大预测
+                            </h2>
+                        </div>
+                    </header>
+                                        <div class="discover-page">
+                        <div class="discover-content">
+                            <iframe src="https://dsyc.pw/" class="iframe-full" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" scrolling="yes" loading="eager"></iframe>
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+            <!-- 优化后的底部导航 - 变得更矮 -->
+            <nav class="bottom-nav">
+                <div class="bottom-nav-container">
+                    <div class="nav-item btn-active">
+                        <i class="fa fa-comments nav-icon"></i>
+                        <span class="nav-label">客服</span>
+                    </div>
+                    <div class="nav-item active btn-active">
+                        <i class="fa fa-home nav-icon"></i>
+                        <span class="nav-label">主页</span>
+                    </div>
+                    <div class="nav-item btn-active">
+                        <i class="fa fa-gift nav-icon"></i>
+                        <span class="nav-label">加拿大预测</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div id="shareNotification" class="share-notification"></div>
+    <div class="hidden">统计代码</div>
+</body>
+
+<!-- Mirrored from 奶龙.cc/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2026 07:40:32 GMT -->
+</html>
